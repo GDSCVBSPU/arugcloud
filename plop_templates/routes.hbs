@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+
+const {{name}}Controller = require('../controllers/{{name}}.controller');
+
+router.post('/', {{name}}Controller.create{{camel name}});
+router.get('/', {{name}}Controller.getAll{{camel name}});
+router.get('/:id', {{name}}Controller.get{{camel name}});
+router.patch('/:id', {{name}}Controller.update{{camel name}});
+router.delete('/:id', {{name}}Controller.delete{{camel name}});
+
+module.exports = router;
